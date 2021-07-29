@@ -12,7 +12,8 @@ class LogResponseWidget extends StatefulWidget {
   _LogResponseWidgetState createState() => _LogResponseWidgetState();
 }
 
-class _LogResponseWidgetState extends State<LogResponseWidget> with AutomaticKeepAliveClientMixin {
+class _LogResponseWidgetState extends State<LogResponseWidget>
+    with AutomaticKeepAliveClientMixin {
   bool isShowAll = false;
   double fontSize = 14;
   @override
@@ -25,11 +26,13 @@ class _LogResponseWidgetState extends State<LogResponseWidget> with AutomaticKee
       children: <Widget>[
         Row(
           children: <Widget>[
-            ElevatedButton(
-              onPressed: () {
-                copyClipboard(context, toJson(json));
-              },
-              child: Text('copy json'),
+            Flexible(
+              child: ElevatedButton(
+                onPressed: () {
+                  copyClipboard(context, toJson(json));
+                },
+                child: Text('copy json'),
+              ),
             ),
             SizedBox(width: 10),
             Text(isShowAll ? 'shrink all' : 'expand all'),
