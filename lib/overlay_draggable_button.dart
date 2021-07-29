@@ -38,9 +38,9 @@ class DraggableButtonWidget extends StatefulWidget {
   final double btnSize;
 
   DraggableButtonWidget({
-    this.title = 'http log',
+    this.title = 'API Log',
     this.onTap,
-    this.btnSize = 66,
+    this.btnSize = 46,
   });
 
   @override
